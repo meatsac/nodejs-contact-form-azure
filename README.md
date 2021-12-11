@@ -36,7 +36,7 @@ az webapp create --name $webappname --resource-group $resourcegroupname --plan $
 az webapp deployment source config --name $webappname --resource-group $resourcegroupname --repo-url $gitrepo --branch master --manual-integration
 
 #set configuration and restart
-az webapp config appsettings set --name $webappname --resource-group rg01 --settings EMAILSERVICE="hotmail" USER="bobsmith@outlook.com" PASS="pass"
+az webapp config appsettings set --name $webappname --resource-group $resourcegroupname --settings EMAILSERVICE="hotmail" USER="bobsmith@outlook.com" PASS="pass"
 az webapp restart --name $webappname --resource-group $resourcegroupname
 ```
 
