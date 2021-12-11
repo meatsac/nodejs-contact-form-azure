@@ -37,7 +37,7 @@ az webapp deployment source config --name $webappname --resource-group $resource
 
 #set configuration and restart
 az webapp config appsettings set --name $webappname --resource-group rg01 --settings EMAILSERVICE="hotmail" USER="bobsmith@outlook.com" PASS="pass"
-az webapp restart --name $webappname
+az webapp restart --name $webappname --resource-group $resourcegroupname
 ```
 
 Now visit the the site (this will take a few minutes), i.e. https://mysamplenodeform.azurewebsites.net/
@@ -56,7 +56,7 @@ az group create --name rg01 --location centralus
 az webapp up --name mysamplenodeform --plan BasicAppServicePlan --resource-group rg01 --sku FREE
 #set configuration and restart
 az webapp config appsettings set --name $webappname --resource-group rg01 --settings EMAILSERVICE="hotmail" USER="bobsmith@outlook.com" PASS="pass"
-az webapp restart --name $webappname
+az webapp restart --name $webappname --resource-group $resourcegroupname
 ```
 
 Once the app is deployed (this will take a few minutes), open a browser and go to https://mysamplenodeform.azurewebsites.net/ 
