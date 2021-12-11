@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Simple Contact Form</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css">
+  <style media="screen">
+    .title {padding: 10px 0;}
+  </style>
+</head>
+<body>
+  <div class="container">
+      <h1 class="title">Simple Contact Form</h1>
+      <form class="cf" action="/send" method="post">
+          <div class="half left cf">
+            <input name="name" type="text" id="input-name" placeholder="Name" class="six columns" required>
+            <input name ="email" type="email" id="input-email" placeholder="Email address" class="six columns" required>
+          </div>
+	  
+         <div class="half right cf">
+         <input name = "subject" type="text" id="input-subject" placeholder="Subject" class="form-control twelve columns" required>
+        </div>
+
+
+         <div class="form-control required">
+           <select id="option1" name="option1" required>
+	<option value="">Please choose a type</option>
+    	<option value="type1">Type1</option>
+    	<option value="type2">Type2</option>
+    	<option value="type3">Type3</option>
+  		</select>
+        </div>
+
+
+        <div class="half right cf">
+          <textarea name="message" type="text" id="input-message" placeholder="Message" class="twelve columns" required></textarea>
+        </div>
+        <p><%= msg %></p>
+        <input type="submit" value="Submit" id="input-submit" class="button-primary">
+      </form>
+  </div>
+</body>
+</html>
